@@ -7,10 +7,11 @@ bubblewrap
 dnsutils
 killall
 nextcloud-client
-wget
+nodejs
 git
 usbutils
 vlc
+wget
 wineWowPackages.staging
 xfsprogs
 
@@ -32,7 +33,7 @@ atk
 bzip2
 cairo
 cups
-curlWithGnuTls
+curl
 dbus
 dbus-glib
 desktop-file-utils
@@ -53,6 +54,7 @@ gst_all_1.gst-plugins-base
 gst_all_1.gst-plugins-ugly
 gst_all_1.gstreamer
 gtk2
+gtk3
 harfbuzz
 icu
 keyutils.lib

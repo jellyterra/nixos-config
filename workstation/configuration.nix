@@ -23,6 +23,13 @@ nixpkgs.config.allowUnfree = true;
 
 system.stateVersion = "24.05";
 
+systemd.targets = {
+	sleep.enable = false;
+	suspend.enable = false;
+	hibernation.enable = false;
+	hybrid-sleep.enable = false;
+};
+
 # Boot
 
 boot.loader.systemd-boot.enable = true;
@@ -145,10 +152,9 @@ programs = {
 
 	mtr.enable = true;
 
-	gnupg.agent = {
-		enable = true;
-		enableSSHSupport = true;
-	};
+	ssh.startAgent = true;
+
+	gnupg.agent.enable = true;
 
 };
 
