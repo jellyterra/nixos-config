@@ -21,7 +21,7 @@ nix.settings.substituters = lib.mkBefore [ "https://mirror.sjtu.edu.cn/nix-chann
 
 nixpkgs.config.allowUnfree = true;
 
-system.stateVersion = "24.05";
+system.stateVersion = "24.11";
 
 systemd.targets = {
 	sleep.enable = false;
@@ -59,7 +59,8 @@ i18n.extraLocaleSettings = {
 };
 
 i18n.inputMethod = {
-	enabled = "fcitx5";
+	enable = true;
+	type = "fcitx5";
 	fcitx5.waylandFrontend = true;
 	fcitx5.addons = with pkgs; [
 		fcitx5-chinese-addons
@@ -90,7 +91,6 @@ services = {
 
 # Audio
 
-hardware.pulseaudio.enable = false;
 security.rtkit.enable = true;
 services.pipewire = {
 	enable = true;
@@ -126,7 +126,7 @@ services.udisks2.enable = lib.mkForce false;
 
 fonts.packages = with pkgs; [
 	noto-fonts
-	noto-fonts-cjk
+	noto-fonts-cjk-sans
 	noto-fonts-emoji
 ];
 

@@ -5,10 +5,10 @@
 appimage-run
 bubblewrap
 dnsutils
+git
 killall
 nextcloud-client
 nodejs
-git
 usbutils
 vlc
 wget

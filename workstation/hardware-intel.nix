@@ -2,10 +2,10 @@
 
 { pkgs, ... }: {
 
-hardware.opengl = {
+hardware.graphics = {
 	enable = true;
 	extraPackages = with pkgs; [
-		onevpl-intel-gpu
+		vpl-gpu-rt
 	];
 };
 
