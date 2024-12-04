@@ -89,6 +89,10 @@ services = {
 
 };
 
+environment.plasma6.excludePackages = with pkgs.kdePackages; [
+	discover
+];
+
 # Audio
 
 security.rtkit.enable = true;
@@ -133,11 +137,15 @@ fonts.packages = with pkgs; [
 # Environment variables
 
 environment.variables = rec {
+	LD_LIBRARY_PATH = lib.mkForce (with pkgs; lib.makeLibraryPath config.programs.nix-ld.libraries);
+
 	PATH = "/bin:/opt/go/bin";
 	SPACE = "/space";
 
 	GOROOT = "/opt/go";
 	GOPATH = "/home/dino/go";
+
+	CARGO_TARGET_DIR = "/home/dino/.cargo/target";
 
 	GOOGLE_API_KEY = "";
 	GOOGLE_DEFAULT_CLIENT_ID = "";

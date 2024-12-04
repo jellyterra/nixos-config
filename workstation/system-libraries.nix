@@ -4,16 +4,21 @@
 
 appimage-run
 bubblewrap
+busybox
 dnsutils
+electron
+flashrom
 git
 killall
 nextcloud-client
 nodejs
+pandoc
 usbutils
 vlc
 wget
 wineWowPackages.staging
 xfsprogs
+zip
 
 kdePackages.flatpak-kcm
 kdePackages.kate
@@ -97,6 +102,7 @@ openssl
 p11-kit
 pango
 pixman
+pkg-config
 python3
 speex
 stdenv.cc.cc
