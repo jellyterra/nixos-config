@@ -51,6 +51,7 @@ freetype
 fribidi
 fuse
 fuse3
+gcc
 gdk-pixbuf
 glew110
 glib
@@ -62,6 +63,7 @@ gtk2
 gtk3
 harfbuzz
 icu
+jdk21
 keyutils.lib
 libGL
 libGLU
@@ -105,7 +107,6 @@ pixman
 pkg-config
 python3
 speex
-stdenv.cc.cc
 tbb
 udev
 vulkan-loader

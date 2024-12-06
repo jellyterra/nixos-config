@@ -40,6 +40,11 @@ boot.loader.efi.canTouchEfiVariables = true;
 networking.hostName = "nixos";
 networking.networkmanager.enable = true;
 
+services.resolved = {
+	enable = true;
+	fallbackDns = [ "1.1.1.1" ];
+};
+
 # Locale
 
 time.timeZone = "Asia/Singapore";
