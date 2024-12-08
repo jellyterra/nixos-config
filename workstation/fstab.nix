@@ -26,7 +26,7 @@ fileSystems."/data" = {
 	options = [ "compress=zstd:3" "noexec" "subvol=@/data" ];
 };
 
-fileSystems."/exdata" = lib.mkDefault {
+fileSystems."/exdata" = lib.mkForce {
 	device = "/dev/sda";
 	fsType = "btrfs";
 	options = [ "nofail" "noexec" ];
