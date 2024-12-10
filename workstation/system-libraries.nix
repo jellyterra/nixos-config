@@ -9,6 +9,7 @@ dnsutils
 electron
 flashrom
 git
+gnumake
 killall
 nextcloud-client
 nodejs
@@ -71,7 +72,7 @@ libappindicator-gtk2
 libcaca
 libcanberra
 libcap
-libclang.lib
+libclang
 libdbusmenu
 libdrm
 libgcrypt
