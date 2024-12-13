@@ -2,9 +2,6 @@
 
 { programs.bash.shellInit = ''
 
-export GOROOT=/opt/go
-export GOPATH=$HOME/go
-
 alias la='ls -a'
 alias lla='ls -la'
 
@@ -14,7 +11,7 @@ function hisc {
 }
 
 function pset {
-	export all_proxy='http://127.0.0.1:1080'
+	export all_proxy='http://[::1]:1080'
 	export http_proxy=$all_proxy
 	export https_proxy=$all_proxy
 }

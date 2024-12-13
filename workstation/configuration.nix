@@ -108,6 +108,7 @@ services.pipewire = {
 # PAM
 
 services.fprintd.enable = true;
+security.pam.services.login.fprintAuth = lib.mkForce true;
 
 users.groups = {
 	dino = {};
@@ -157,13 +158,11 @@ environment.variables = rec {
 
 programs = {
 
-	nix-ld.enable = true;
+gnupg.agent.enable = true;
+mtr.enable = true;
+nix-ld.enable = true;
 
-	mtr.enable = true;
-
-	ssh.startAgent = true;
-
-	gnupg.agent.enable = true;
+ssh.startAgent = true;
 
 };
 

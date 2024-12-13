@@ -8,7 +8,7 @@
 		"--enable-wayland-ime"
 		"--enable-features=UseOzonePlatform,ScrollableTabStrip:minTabWidth/140"
 		"--ozone-platform-hint=wayland"
-		"--proxy-server=http://127.0.0.1:1080"
+		"--proxy-server=http://[::1]:1080"
 	];
 })
 

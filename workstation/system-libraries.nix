@@ -15,6 +15,7 @@ nextcloud-client
 nodejs
 pandoc
 usbutils
+verilator
 vlc
 wget
 wineWowPackages.staging
