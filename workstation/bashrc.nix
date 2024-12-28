@@ -2,8 +2,9 @@
 
 { programs.bash.shellInit = ''
 
-alias la='ls -a'
-alias lla='ls -la'
+alias la='ls -ha'
+alias ll='ls -hl'
+alias lla='ls -hla'
 
 function hisc {
 	rm -f $HOME/.bash_history

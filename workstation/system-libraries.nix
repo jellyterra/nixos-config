@@ -5,6 +5,7 @@
 appimage-run
 bubblewrap
 busybox
+cmake
 dnsutils
 electron
 flashrom
@@ -13,6 +14,7 @@ gnumake
 killall
 nextcloud-client
 nodejs
+nushell
 pandoc
 usbutils
 verilator
@@ -100,6 +102,7 @@ libxcrypt-legacy
 libxkbcommon
 libxml2
 mesa
+ncurses5
 nspr
 nss
 openssl

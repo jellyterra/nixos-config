@@ -29,7 +29,7 @@ fileSystems."/data" = {
 fileSystems."/exdata" = lib.mkForce {
 	device = "/dev/sda";
 	fsType = "btrfs";
-	options = [ "nofail" "noexec" ];
+	options = [ "nofail" "nosuid" ];
 };
 
 }
