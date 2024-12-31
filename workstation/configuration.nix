@@ -39,10 +39,12 @@ boot.loader.efi.canTouchEfiVariables = true;
 
 networking.hostName = "nixos";
 networking.networkmanager.enable = true;
+networking.nameservers = [ "2606:4700:4700::1111" ];
 
 services.resolved = {
 	enable = true;
-	fallbackDns = [ "1.1.1.1" ];
+	dnssec = "true";
+	dnsovertls = "true";
 };
 
 # Locale
