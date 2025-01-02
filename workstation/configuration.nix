@@ -6,7 +6,7 @@ imports = [
 	./hardware-configuration.nix
 	./fstab.nix
 	./bashrc.nix
-	./firewall.nix
+	./network.nix
 	./udev-rules.nix
 	./system-libraries.nix
 	./system-packages.nix
@@ -34,18 +34,6 @@ systemd.targets = {
 
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
-
-# Networking
-
-networking.hostName = "nixos";
-networking.networkmanager.enable = true;
-networking.nameservers = [ "2606:4700:4700::1111" ];
-
-services.resolved = {
-	enable = true;
-	dnssec = "true";
-	dnsovertls = "true";
-};
 
 # Locale
 
