@@ -1,8 +1,10 @@
-# Copyright (C) 2024 Jelly Terra. All rights reserved.
+# Copyright (C) 2025 Jelly Terra. All rights reserved.
 
 { pkgs, ... }: { programs.nix-ld.libraries = with pkgs; [
 
+android-tools
 appimage-run
+bluespec
 bubblewrap
 busybox
 cmake
@@ -11,11 +13,15 @@ electron
 flashrom
 git
 gnumake
+jdk21
 killall
+mtr
 nextcloud-client
 nodejs
 nushell
 pandoc
+scrcpy
+thunderbird
 usbutils
 verilator
 vlc

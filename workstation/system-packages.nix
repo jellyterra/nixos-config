@@ -1,6 +1,8 @@
-# Copyright (C) 2024 Jelly Terra. All rights reserved.
+# Copyright (C) 2025 Jelly Terra. All rights reserved.
 
 { config, pkgs, ... }: { environment.systemPackages = with pkgs; [
+
+nix-ld
 
 (chromium.override {
 	enableWideVine = true;

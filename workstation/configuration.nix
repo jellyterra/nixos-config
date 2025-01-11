@@ -1,4 +1,4 @@
-# Copyright (C) 2024 Jelly Terra. All rights reserved.
+# Copyright (C) 2025 Jelly Terra. All rights reserved.
 
 { config, pkgs, lib, ... }: {
 
@@ -150,9 +150,6 @@ environment.variables = rec {
 programs = {
 
 gnupg.agent.enable = true;
-mtr.enable = true;
-nix-ld.enable = true;
-
 ssh.startAgent = true;
 
 };
