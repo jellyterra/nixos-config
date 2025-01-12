@@ -2,8 +2,6 @@
 
 { config, pkgs, ... }: { environment.systemPackages = with pkgs; [
 
-nix-ld
-
 (chromium.override {
 	enableWideVine = true;
 	commandLineArgs = [

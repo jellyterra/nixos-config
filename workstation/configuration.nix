@@ -149,6 +149,8 @@ environment.variables = rec {
 
 programs = {
 
+nix-ld.enable = true;
+
 gnupg.agent.enable = true;
 ssh.startAgent = true;
 
