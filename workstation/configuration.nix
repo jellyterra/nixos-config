@@ -4,14 +4,15 @@
 
 imports = [
 	./hardware-configuration.nix
-	./fstab.nix
+	./hardware-printer.nix
+	./hardware-intel.nix
+
 	./bashrc.nix
+	./fstab.nix
 	./network.nix
-	./udev-rules.nix
 	./system-libraries.nix
 	./system-packages.nix
-
-	./hardware-intel.nix
+	./udev-rules.nix
 ];
 
 
