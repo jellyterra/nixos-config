@@ -2,6 +2,10 @@
 
 { services.udev.extraRules = ''
 
+# SD/MMC
+
+SUBSYSTEM=="block", KERNEL=="mmcblk*", GROUP="plugdev"
+
 # USB Vendor ID
 
 # FTDI
