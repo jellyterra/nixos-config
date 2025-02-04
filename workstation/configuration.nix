@@ -13,6 +13,7 @@ imports = [
 	./system-libraries.nix
 	./system-packages.nix
 	./udev-rules.nix
+	./virt.nix
 ];
 
 
@@ -133,7 +134,7 @@ fonts.packages = with pkgs; [
 environment.variables = rec {
 	LD_LIBRARY_PATH = lib.mkForce (with pkgs; lib.makeLibraryPath config.programs.nix-ld.libraries);
 
-	PATH = "/bin:/opt/go/bin";
+	PATH = "/run/current-system/sw/bin:/usr/local/bin:/opt/go/bin";
 	SPACE = "/space";
 
 	GOROOT = "/opt/go";
