@@ -101,7 +101,16 @@ services.pipewire = {
 # PAM
 
 services.fprintd.enable = true;
-security.pam.services.login.fprintAuth = lib.mkForce true;
+
+security.pam.services = {
+	login.fprintAuth = lib.mkForce true;
+	login.u2fAuth = lib.mkForce true;
+};
+
+security.pam.u2f = {
+	enable = true;
+	authFile = "/etc/u2f_keys";
+};
 
 users.groups = {
 	dino = {};
@@ -112,7 +121,7 @@ users.users.dino = {
 	isNormalUser = true;
 	description = "Jelly Terra";
 	group = "dino";
-	extraGroups = [ "networkmanager" "wheel" "plugdev" "dialout" "audio" ];
+	extraGroups = [ "networkmanager" "plugdev" "dialout" "audio" ];
 };
 
 # Applications
@@ -150,12 +159,10 @@ environment.variables = rec {
 # Programs
 
 programs = {
+	nix-ld.enable = true;
 
-nix-ld.enable = true;
-
-gnupg.agent.enable = true;
-ssh.startAgent = true;
-
+	gnupg.agent.enable = true;
+	ssh.startAgent = true;
 };
 
 }
