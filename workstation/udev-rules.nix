@@ -6,6 +6,10 @@
 
 SUBSYSTEM=="block", KERNEL=="mmcblk*", GROUP="plugdev"
 
+# USB DFU
+
+SUBSYSTEMS=="usb", ATTR{idVendor}=="361c", ATTR{idProduct}=="1001", MODE="0666"
+
 # USB Vendor ID
 
 # FTDI

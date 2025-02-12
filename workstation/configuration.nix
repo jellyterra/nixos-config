@@ -4,8 +4,7 @@
 
 imports = [
 	./hardware-configuration.nix
-	./hardware-printer.nix
-	./hardware-intel.nix
+	./hardware.nix
 
 	./bashrc.nix
 	./fstab.nix
@@ -109,7 +108,7 @@ security.pam.services = {
 
 security.pam.u2f = {
 	enable = true;
-	authFile = "/etc/u2f_keys";
+	settings.authfile = "/etc/u2f_keys";
 };
 
 users.groups = {
@@ -141,9 +140,10 @@ fonts.packages = with pkgs; [
 # Environment variables
 
 environment.variables = rec {
-	LD_LIBRARY_PATH = lib.mkForce (with pkgs; lib.makeLibraryPath config.programs.nix-ld.libraries);
+	LD_LIBRARY_PATH = lib.mkForce "/run/current/system/sw/lib";
 
-	PATH = "/run/current-system/sw/bin:/usr/local/bin:/opt/go/bin";
+	PATH = "/run/current-system/sw/bin:/usr/bin:/usr/local/bin:/opt/go/bin";
+
 	SPACE = "/space";
 
 	GOROOT = "/opt/go";

@@ -1,6 +1,24 @@
 # Copyright (C) 2025 Jelly Terra. All rights reserved.
 
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
+
+# Bluetooth
+
+hardware.bluetooth = {
+	enable = true;
+	powerOnBoot = true;
+};
+
+# Intel Graphics
+
+hardware.graphics = {
+	enable = true;
+	extraPackages = with pkgs; [
+		vpl-gpu-rt
+	];
+};
+
+# Printer
 
 services.printing.enable = true;
 
