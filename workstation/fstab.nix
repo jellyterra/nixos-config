@@ -5,25 +5,25 @@
 fileSystems."/home" = {
 	device = "/dev/nvme0n1p2";
 	fsType = "btrfs";
-	options = [ "compress=zstd:3" "nosuid" "subvol=@/home" ];
+	options = [ "compress=zstd:3" "nofail" "nosuid" "subvol=@/home" ];
 };
 
 fileSystems."/opt" = {
 	device = "/dev/nvme0n1p2";
 	fsType = "btrfs";
-	options = [ "compress=zstd:3" "nosuid" "subvol=@/opt" ];
+	options = [ "compress=zstd:3" "nofail" "nosuid" "subvol=@/opt" ];
 };
 
 fileSystems."/space" = {
 	device = "/dev/nvme0n1p2";
 	fsType = "btrfs";
-	options = [ "compress=zstd:3" "nosuid" "subvol=@/space" ];
+	options = [ "compress=zstd:3" "nofail" "nosuid" "subvol=@/space" ];
 };
 
 fileSystems."/data" = {
 	device = "/dev/nvme0n1p2";
 	fsType = "btrfs";
-	options = [ "compress=zstd:3" "noexec" "subvol=@/data" ];
+	options = [ "compress=zstd:3" "nofail" "noexec" "subvol=@/data" ];
 };
 
 fileSystems."/exdata" = lib.mkForce {

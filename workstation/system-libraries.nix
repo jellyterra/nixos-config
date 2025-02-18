@@ -6,6 +6,7 @@ nextcloud-client
 thunderbird
 vlc
 
+emacs
 vscode
 
 bluespec
@@ -104,7 +105,6 @@ libpng12
 libpulseaudio
 librsvg
 libsamplerate
-libthai
 libtheora
 libtiff
 libudev0-shim

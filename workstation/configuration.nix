@@ -19,6 +19,7 @@ imports = [
 # NixOS
 
 nix.settings.substituters = lib.mkBefore [ "https://mirror.sjtu.edu.cn/nix-channels/store" ];
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 nixpkgs.config.allowUnfree = true;
 
@@ -43,15 +44,15 @@ time.timeZone = "Asia/Singapore";
 i18n.defaultLocale = "en_US.UTF-8";
 
 i18n.extraLocaleSettings = {
-	LC_ADDRESS = "en_SG.UTF-8";
-	LC_IDENTIFICATION = "en_SG.UTF-8";
-	LC_MEASUREMENT = "en_SG.UTF-8";
-	LC_MONETARY = "en_SG.UTF-8";
-	LC_NAME = "en_SG.UTF-8";
-	LC_NUMERIC = "en_SG.UTF-8";
-	LC_PAPER = "en_SG.UTF-8";
-	LC_TELEPHONE = "en_SG.UTF-8";
-	LC_TIME = "en_SG.UTF-8";
+	LC_ADDRESS = "en_US.UTF-8";
+	LC_IDENTIFICATION = "en_US.UTF-8";
+	LC_MEASUREMENT = "en_US.UTF-8";
+	LC_MONETARY = "en_US.UTF-8";
+	LC_NAME = "en_US.UTF-8";
+	LC_NUMERIC = "en_US.UTF-8";
+	LC_PAPER = "en_US.UTF-8";
+	LC_TELEPHONE = "en_US.UTF-8";
+	LC_TIME = "en_US.UTF-8";
 };
 
 i18n.inputMethod = {
@@ -140,8 +141,6 @@ fonts.packages = with pkgs; [
 # Environment variables
 
 environment.variables = rec {
-	LD_LIBRARY_PATH = lib.mkForce "/run/current/system/sw/lib";
-
 	PATH = "/run/current-system/sw/bin:/usr/bin:/usr/local/bin:/opt/go/bin";
 
 	SPACE = "/space";
