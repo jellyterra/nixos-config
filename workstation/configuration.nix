@@ -9,7 +9,6 @@ imports = [
 	./bashrc.nix
 	./fstab.nix
 	./network.nix
-	./system-libraries.nix
 	./system-packages.nix
 	./udev-rules.nix
 	./virt.nix
@@ -158,10 +157,13 @@ environment.variables = rec {
 # Programs
 
 programs = {
-	nix-ld.enable = true;
-
 	gnupg.agent.enable = true;
 	ssh.startAgent = true;
+};
+
+programs.nix-ld = {
+	enable = true;
+	libraries = import ./system-libraries.nix { inherit pkgs; };
 };
 
 }

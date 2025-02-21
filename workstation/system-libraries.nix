@@ -1,47 +1,6 @@
 # Copyright (C) 2025 Jelly Terra. All rights reserved.
 
-{ pkgs, ... }: { programs.nix-ld.libraries = with pkgs; [
-
-nextcloud-client
-thunderbird
-vlc
-
-emacs
-vscode
-
-bluespec
-iverilog
-verilator
-
-espflash
-flashrom
-scrcpy
-
-cmake
-gnumake
-ninja
-
-electron
-jdk21
-nodejs
-nushell
-tcl
-
-kdePackages.flatpak-kcm
-kdePackages.kate
-
-android-tools
-bubblewrap
-busybox
-dnsutils
-git
-killall
-mtr
-usbutils
-wget
-wineWowPackages.staging
-xfsprogs
-zip
+{ pkgs }: with pkgs; [
 
 SDL
 SDL2
@@ -159,4 +118,4 @@ xorg.xkeyboardconfig
 xz
 zlib
 
-]; }
+]
