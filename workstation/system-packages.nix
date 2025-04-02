@@ -12,6 +12,7 @@
 	];
 })
 
+firefox
 nextcloud-client
 thunderbird
 vlc
@@ -28,8 +29,10 @@ flashrom
 scrcpy
 
 cmake
+gradle
 gnumake
 ninja
+sbt
 
 electron
 jdk21
@@ -49,6 +52,7 @@ git
 htop
 killall
 mtr
+sshfs
 usbutils
 wget
 wineWowPackages.staging

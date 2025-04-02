@@ -7,7 +7,6 @@ imports = [
 	./hardware.nix
 
 	./bashrc.nix
-	./fstab.nix
 	./network.nix
 	./system-packages.nix
 	./udev-rules.nix
@@ -17,19 +16,12 @@ imports = [
 
 # NixOS
 
-nix.settings.substituters = lib.mkBefore [ "https://mirror.sjtu.edu.cn/nix-channels/store" ];
+nix.settings.substituters = lib.mkBefore [ "https://mirrors.sjtug.sjtu.edu.cn/nix-channels/store" ];
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 nixpkgs.config.allowUnfree = true;
 
 system.stateVersion = "24.11";
-
-systemd.targets = {
-	sleep.enable = false;
-	suspend.enable = false;
-	hibernation.enable = false;
-	hybrid-sleep.enable = false;
-};
 
 # Boot
 
@@ -148,10 +140,6 @@ environment.variables = rec {
 	GOPATH = "/home/dino/go";
 
 	CARGO_TARGET_DIR = "/home/dino/.cargo/target";
-
-	GOOGLE_API_KEY = "";
-	GOOGLE_DEFAULT_CLIENT_ID = "";
-	GOOGLE_DEFAULT_CLIENT_SECRET = "";
 };
 
 # Programs
