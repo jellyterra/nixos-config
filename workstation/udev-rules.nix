@@ -2,6 +2,9 @@
 
 { services.udev.extraRules = ''
 
+# HDD
+SUBSYSTEM=="block", KERNEL=="sd*", RUN+="/bin/hdparm -S 1 /dev/%k"
+
 # SD/MMC
 
 SUBSYSTEM=="block", KERNEL=="mmcblk*", GROUP="plugdev"
