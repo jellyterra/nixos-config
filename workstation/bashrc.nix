@@ -12,9 +12,10 @@ function hisc {
 }
 
 function pset {
-	export all_proxy='http://[::1]:1080'
-	export http_proxy=$all_proxy
-	export https_proxy=$all_proxy
+	export proxy_host='[::1]:1080'
+	export all_proxy="socks5://$proxy_host"
+	export http_proxy="http://$proxy_host"
+	export https_proxy="$http_proxy"
 }
 
 function punset {
